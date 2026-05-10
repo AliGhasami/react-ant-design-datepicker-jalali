@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# Ant Design Jalali Date Picker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Persian (Jalali) calendar date picker component built with Ant Design and React.
 
-Currently, two official plugins are available:
+![Jalali Date Picker Demo](./image.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## React Compiler
+This project provides a ready-to-use **Jalali (Persian) calendar date picker** that integrates seamlessly with [Ant Design](https://ant.design/) components. It's perfect for Persian-language applications requiring a localized date selection experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- 🗓️ **Jalali Calendar Support** - Full Persian calendar system (Solar Hijri)
+- 🎨 **Ant Design Integration** - Uses [`antd`](https://ant.design/components/date-picker) DatePicker component with Persian locale
+- 📦 **TypeScript Ready** - Built with TypeScript for type safety
+- 🔧 **Customizable** - Extend the base [`DatePickerJalali`](src/components/DatePickerJalali.tsx) component
+- ⚡ **Vite Powered** - Fast development build and hot module replacement
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Clone the repository and install dependencies:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Usage
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Basic Implementation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Customizing the Date Picker
+
+The component exposes the underlying Ant Design [`DatePicker`](https://ant.design/components/date-picker) props. You can modify [`DatePickerJalali.tsx`](src/components/DatePickerJalali.tsx) to add features like:
+
+- Date formatting
+- Disabled dates
+- Range selection
+- Custom presets
+
+Example enhancement:
+
+
+## Project Structure
+
+
+## Development
+
+Start the development server:
+
+
+Build for production:
+
+
+Lint the code:
+
+
+## Dependencies
+
+- [`react`](https://react.dev/) ^19.2.0
+- [`antd`](https://ant.design/) ^6.3.0
+- [`dayjalali`](https://www.npmjs.com/package/dayjalali) ^1.0.1 - Jalali calendar conversion
+- [`vite`](https://vitejs.dev/) ^7.3.1
+
+## License
+
+Private project - All rights reserved.
+
+## Contributing
+
+This is a demonstration project. For production use, extend the base component with full Jalali calendar configuration using the `dayjalali` library.

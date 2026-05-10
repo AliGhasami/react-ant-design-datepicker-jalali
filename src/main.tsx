@@ -2,7 +2,6 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import dayjs from 'dayjs'
-import locale from 'antd/locale/fa_IR';
 
 import 'dayjs/locale/fa'
 //import 'dayjs/locale/fa';
@@ -83,7 +82,6 @@ function initApp(){
             <App />
         </StrictMode>,
     )
-
 }
 
 
